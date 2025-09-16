@@ -1,184 +1,90 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cartão Digital • HelpTech Antunes</title>
-  <meta name="description" content="Cartão digital de contato - HelpTech Antunes" />
-  <meta name="theme-color" content="#0ea5e9" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HelpTech Antunes - Cartão Digital</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    :root{
-      --bg:#0b1220; --card:#0f172a; --text:#e5e7eb;
-      --muted:#9ca3af; --primary:#0ea5e9; --ring:#38bdf8;
+    body {
+      font-family: Arial, sans-serif;
+      background: #0d1117;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
     }
-    *{box-sizing:border-box}
-    body{
-      margin:0; min-height:100dvh; display:grid; place-items:center;
-      background: radial-gradient(60% 60% at 20% 10%, #0a1a2f, #070b14 50%, #03060b);
-      color:var(--text); font:16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-      padding:24px;
+    .card {
+      background: #161b22;
+      border-radius: 15px;
+      padding: 25px;
+      width: 350px;
+      box-shadow: 0px 6px 18px rgba(0,0,0,0.5);
+      text-align: center;
+      color: #fff;
     }
-    .card{
-      width:100%; max-width:720px; background:var(--card);
-      border:1px solid rgba(255,255,255,.06);
-      box-shadow: 0 10px 30px rgba(0,0,0,.4);
-      border-radius:24px; padding:28px; position:relative; overflow:hidden;
+    .card img {
+      width: 120px;
+      margin-bottom: 15px;
     }
-    .ring{ position:absolute; inset:-40% -10% auto auto; width:420px; height:420px; border-radius:50%;
-      background: radial-gradient(closest-side, rgba(56,189,248,.15), transparent 70%); filter: blur(16px);
+    .card h2 {
+      margin: 10px 0;
+      color: #00aaff;
     }
-    .header{ display:flex; gap:20px; align-items:center; flex-wrap:wrap}
-    .avatar{
-      width:92px; height:92px; border-radius:50%; display:grid; place-items:center;
-      background:linear-gradient(135deg, #0ea5e9, #22d3ee);
-      box-shadow:0 8px 24px rgba(14,165,233,.35); font-weight:800; font-size:28px; color:#002538;
-      user-select:none;
+    .card p {
+      color: #ccc;
+      font-size: 14px;
+      margin-bottom: 20px;
     }
-    .title{ font-size:24px; font-weight:800; letter-spacing:.2px }
-    .subtitle{ color:var(--muted); margin-top:2px }
-    .badges{ display:flex; gap:8px; flex-wrap:wrap; margin-top:10px }
-    .badge{ font-size:12px; padding:6px 10px; border-radius:999px; border:1px solid rgba(255,255,255,.08); color:#cfefff; background:rgba(14,165,233,.08) }
-    .links{ display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:10px; margin-top:22px }
-    .btn{
-      display:flex; align-items:center; gap:10px; padding:12px 14px; border-radius:14px;
-      background:#0b1222; border:1px solid rgba(255,255,255,.06); text-decoration:none; color:var(--text);
-      transition:.2s transform, .2s box-shadow, .2s border-color;
+    .card .btn {
+      display: block;
+      margin: 8px 0;
+      padding: 12px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #fff;
+      transition: 0.3s;
     }
-    .btn:hover{ transform:translateY(-1px); border-color:rgba(56,189,248,.35); box-shadow:0 6px 18px rgba(56,189,248,.12) }
-    .btn svg{ width:18px; height:18px; flex:0 0 18px }
-    .footer{ display:flex; gap:10px; flex-wrap:wrap; margin-top:18px; color:var(--muted); font-size:13px }
-    .cta{ margin-top:22px; display:flex; gap:10px; flex-wrap:wrap }
-    .cta .act{
-      border:0; background:var(--primary); color:#002538; font-weight:700; padding:12px 14px; border-radius:12px; cursor:pointer;
-    }
-    .cta .ghost{
-      background:transparent; color:var(--text); border:1px solid rgba(255,255,255,.16)
-    }
-    .hr{ height:1px; background:linear-gradient(90deg, transparent, rgba(255,255,255,.08), transparent); margin:18px 0 }
-    @media (prefers-color-scheme: light){
-      body{ background:#eef7ff; color:#0b1220 }
-      .card{ background:white; border-color:#e5e7eb }
-      .btn{ background:#f8fafc; color:#0b1220; border-color:#e5e7eb }
-      .subtitle,.footer{ color:#4b5563 }
-      .badge{ color:#075985; background:#e0f2fe; border-color:#bae6fd }
+    .btn.whatsapp { background: #25D366; }
+    .btn.instagram { background: #E1306C; }
+    .btn.site { background: #007bff; }
+    .btn.mapa { background: #444; }
+    .btn:hover { opacity: 0.9; }
+    .endereco {
+      font-size: 13px;
+      margin-top: 15px;
+      color: #aaa;
+      line-height: 1.4;
     }
   </style>
 </head>
 <body>
-  <main class="card" role="main" aria-label="Cartão digital de contato">
-    <div class="ring" aria-hidden="true"></div>
+  <div class="card">
+    <h2>HelpTech Antunes</h2>
+    <p>Assistência Técnica • TI • Serviços Gráficos</p>
 
-    <section class="header">
-      <div class="avatar" aria-label="Logo/Inicial">HA</div>
-      <div>
-        <div class="title">HelpTech Antunes</div>
-        <div class="subtitle">Alison Antunes Miranda • Fundador & Técnico</div>
-        <div class="badges">
-          <span class="badge">Assistência Técnica</span>
-          <span class="badge">TI & Redes</span>
-          <span class="badge">Serviços Gráficos</span>
-        </div>
-      </div>
-    </section>
+    <a href="https://wa.me/5511957805217" class="btn whatsapp" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i> WhatsApp
+    </a>
+    <a href="https://instagram.com/helptech_antunes" class="btn instagram" target="_blank">
+      <i class="fa-brands fa-instagram"></i> Instagram
+    </a>
+    <a href="https://miranda-tech.vercel.app" class="btn site" target="_blank">
+      <i class="fa-solid fa-globe"></i> Site Oficial
+    </a>
+    <a href="https://maps.google.com/?q=Avenida+Luís+Pereira+dos+Santos,+408,+Jardim+Celeste,+Corrupira,+Jundiaí,+SP,+13214820" 
+       class="btn mapa" target="_blank">
+      <i class="fa-solid fa-map-marker-alt"></i> Localização
+    </a>
 
-    <div class="hr"></div>
-
-    <section class="links" aria-label="Ações rápidas">
-      <a class="btn" href="https://wa.me/5511957805217?text=Olá%2C%20vim%20pelo%20cartão%20digital." target="_blank" rel="noopener">
-        <!-- WhatsApp -->
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163A11.94 11.94 0 0112.02.003C18.627 0 24 5.373 24 11.98c0 6.627-5.373 12-12 12a11.95 11.95 0 01-6.119-1.688L.057 24zm6.597-3.807c1.741.995 3.276 1.591 5.392 1.593 5.448 0 9.886-4.434 9.886-9.886 0-5.448-4.438-9.887-9.886-9.887-5.451 0-9.887 4.439-9.887 9.887 0 2.211.656 3.891 1.772 5.555l-.94 3.437 3.663-.699zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.03-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.149-.174.198-.298.297-.497.099-.198.05-.372-.025-.521-.074-.149-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.078 4.487.71.306 1.263.489 1.694.626.712.227 1.36.195 1.872.118.571-.085 1.758-.718 2.006-1.411.248-.694.248-1.289.173-1.413z"/></svg>
-        WhatsApp
-      </a>
-
-      <a class="btn" href="tel:+5511957805217">
-        <!-- Phone -->
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.11.37 2.31.57 3.58.57a1 1 0 011 1V21a1 1 0 01-1 1C10.29 22 2 13.71 2 3a1 1 0 011-1h3.5a1 1 0 011 1c0 1.27.2 2.47.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z"/></svg>
-        Ligar
-      </a>
-
-      <a class="btn" href="mailto:antuneshelptech6@gmail.com">
-        <!-- Mail -->
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-        E-mail
-      </a>
-
-      <a class="btn" href="https://instagram.com/helptech_antunes" target="_blank" rel="noopener">
-        <!-- Instagram -->
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.584.012 4.85.07 1.17.054 1.97.24 2.43.402.61.212 1.05.467 1.51.927.46.46.716.9.927 1.51.163.46.348 1.26.402 2.43.058 1.266.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.054 1.17-.24 1.97-.402 2.43a3.84 3.84 0 01-.927 1.51 3.84 3.84 0 01-1.51.927c-.46.163-1.26.348-2.43.402-1.266.058-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-1.97-.24-2.43-.402a3.84 3.84 0 01-1.51-.927 3.84 3.84 0 01-.927-1.51c-.163-.46-.348-1.26-.402-2.43C2.212 15.584 2.2 15.2 2.2 12s.012-3.584.07-4.85c.054-1.17.24-1.97.402-2.43.212-.61.467-1.05.927-1.51s.9-.716 1.51-.927c.46-.163 1.26-.348 2.43-.402C8.416 2.212 8.8 2.2 12 2.2zm0 1.8c-3.16 0-3.53.012-4.77.07-.99.045-1.53.21-1.89.35-.48.186-.82.41-1.18.77-.36.36-.584.7-.77 1.18-.14.36-.305.9-.35 1.89-.058 1.24-.07 1.61-.07 4.77s.012 3.53.07 4.77c.045.99.21 1.53.35 1.89.186.48.41.82.77 1.18.36.36.7.584 1.18.77.36.14.9.305 1.89.35 1.24.058 1.61.07 4.77.07s3.53-.012 4.77-.07c.99-.045 1.53-.21 1.89-.35.48-.186.82-.41 1.18-.77.36-.36.584-.7.77-1.18.14-.36.305-.9.35-1.89.058-1.24.07-1.61.07-4.77s-.012-3.53-.07-4.77c-.045-.99-.21-1.53-.35-1.89a2.41 2.41 0 00-.77-1.18 2.41 2.41 0 00-1.18-.77c-.36-.14-.9-.305-1.89-.35-1.24-.058-1.61-.07-4.77-.07zm0 2.8a6.2 6.2 0 110 12.4 6.2 6.2 0 010-12.4zm0 2a4.2 4.2 0 100 8.4 4.2 4.2 0 000-8.4zm5.7-2.44a1.46 1.46 0 110 2.92 1.46 1.46 0 010-2.92z"/></svg>
-        Instagram
-      </a>
-
-      <a class="btn" href="https://www.google.com/maps?q=Avenida%20Lu%C3%ADs%20Pereira%20dos%20Santos%2C%20566%20-%20Jundia%C3%AD%2FSP%20-%2013214-820" target="_blank" rel="noopener">
-        <!-- Map -->
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5A2.5 2.5 0 119.5 9 2.5 2.5 0 0112 11.5z"/></svg>
-        Localização
-      </a>
-
-      <a class="btn" href="https://github.com/ALISON148" target="_blank" rel="noopener">
-        <!-- GitHub -->
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 00-3.79 23.4c.6.11.82-.27.82-.6v-2.16c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.1-.75.08-.73.08-.73 1.22.09 1.87 1.25 1.87 1.25 1.08 1.85 2.84 1.31 3.53 1 .11-.78.42-1.31.76-1.61-2.67-.31-5.48-1.33-5.48-5.9 0-1.3.47-2.36 1.24-3.2-.12-.31-.54-1.56.12-3.25 0 0 1.01-.32 3.3 1.22a11.5 11.5 0 016 0c2.29-1.54 3.3-1.22 3.3-1.22.66 1.69.24 2.94.12 3.25.77.84 1.24 1.9 1.24 3.2 0 4.59-2.81 5.58-5.49 5.88.43.37.82 1.1.82 2.22v3.29c0 .33.21.72.83.6A12 12 0 0012 .5z"/></svg>
-        GitHub
-      </a>
-
-      <a class="btn" href="https://miranda-tech-nwq4imi5r-alisons-projects-f41ebd8c.vercel.app" target="_blank" rel="noopener">
-        <!-- Globe -->
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm7.93 9h-3.26A15.9 15.9 0 0016 5.26 8.03 8.03 0 0119.93 11zM12 4c.9 0 2.43 1.92 3.06 5H8.94C9.57 5.92 11.1 4 12 4zM4.07 13h3.26A15.9 15.9 0 008 18.74 8.03 8.03 0 014.07 13zM8.94 13h6.12c-.63 3.08-2.16 5-3.06 5s-2.43-1.92-3.06-5zM16 18.74A15.9 15.9 0 0016.67 13h3.26A8.03 8.03 0 0116 18.74zM7.33 11H4.07A8.03 8.03 0 018 5.26 15.9 15.9 0 007.33 11z"/></svg>
-        Site
-      </a>
-    </section>
-
-    <section class="cta">
-      <button class="act" id="saveVcf">Salvar contato (.vcf)</button>
-      <button class="act ghost" id="share">Compartilhar</button>
-    </section>
-
-    <section class="footer">
-      <span>📍 Jundiaí/SP</span>
-      <span>•</span>
-      <span>atend. 08h–18h</span>
-      <span>•</span>
-      <span>© HelpTech Antunes</span>
-    </section>
-  </main>
-
-  <script>
-    // Baixar vCard (funciona 100% offline)
-    document.getElementById('saveVcf').addEventListener('click', () => {
-      const vcard = [
-        'BEGIN:VCARD',
-        'VERSION:3.0',
-        'N:Miranda;Alison Antunes;;;',
-        'FN:Alison Antunes Miranda',
-        'ORG:HelpTech Antunes',
-        'TITLE:Fundador & Técnico',
-        'TEL;TYPE=CELL:+55 11 95780-5217',
-        'EMAIL:antuneshelptech6@gmail.com',
-        'URL:https://miranda-tech-nwq4imi5r-alisons-projects-f41ebd8c.vercel.app',
-        'ADR;TYPE=WORK:;;Avenida Luís Pereira dos Santos, 566;Jundiaí;SP;13214-820;Brasil',
-        'END:VCARD'
-      ].join('\\n');
-
-      const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
-      const url = URL.createObjectURL(blob);
-      const a = Object.assign(document.createElement('a'), { href: url, download: 'HelpTech-Antunes.vcf' });
-      document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
-    });
-
-    // Compartilhar link do cartão
-    document.getElementById('share').addEventListener('click', async () => {
-      const shareData = {
-        title: 'HelpTech Antunes',
-        text: 'Cartão digital • Assistência técnica, TI & serviços gráficos',
-        url: location.href
-      };
-      try {
-        if (navigator.share) { await navigator.share(shareData); }
-        else {
-          await navigator.clipboard.writeText(shareData.url);
-          alert('Link copiado! Cole no WhatsApp ou Instagram.');
-        }
-      } catch (_) {}
-    });
-  </script>
+    <div class="endereco">
+      📍 Avenida Luís Pereira dos Santos,556<br>
+      Jardim Celeste – Corrupira<br>
+      Jundiaí – SP, Brasil<br>
+      CEP 13214-820
+    </div>
+  </div>
 </body>
 </html>
